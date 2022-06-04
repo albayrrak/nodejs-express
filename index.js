@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+const Users = require("./users");
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
+app.get("/users", (req, res) => {
+    res.json(Users);
 });
 
 app.listen(process.env.PORT || 5000, () => {
